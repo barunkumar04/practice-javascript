@@ -43,4 +43,12 @@ console.log(boolIsLoggedIn)
 // "AString" -> False
 
 
+/******************* * * * Operations * * * **********************/
+console.log(1+"2"); // 12
+console.log("1"+2); // 12
+console.log("1" + "2"); // 12
+console.log("1" + 1 + 2); //112
+console.log(1 + 1 + "2"); // 22
+console.log(1 + 1 + "2" + 1 + 1); // 2211
 
+// These conversion rule is written here - https://tc39.es/ecma262/#sec-type-conversion
