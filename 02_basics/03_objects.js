@@ -87,3 +87,26 @@ let customer = {
 
 console.log(customer); // 3 level of nesting
 
+// Object merging
+
+const object1 = {1:"a", 2:"b"};
+const object2 = {3:"a", 4:"b"};
+
+const object3 = {object1, object2};
+
+console.log(object3); // Notice, its not merged and this is not ieal way to merge object{ object1: { '1': 'a', '2': 'b' }, object2: { '3': 'a', '4': 'b' } }
+
+// Suggested way is to use assign or spread operator
+// Syntax: Object.assign(targetObject, sourceObject1, sourceObject2, sourceObject3)
+
+const mergedObject = Object.assign({}, object1, object2)
+console.log(mergedObject);
+
+const mergedObjectUsingSpread = {...object1, ...object2}
+console.log(mergedObjectUsingSpread);
+
+// when obejects is a array
+
+console.log(Object.keys(aUser));
+console.log(Object.values(aUser));
+console.log(aUser.hasOwnProperty("location"));
