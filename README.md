@@ -7,7 +7,7 @@
 
 ## To revist
 
-1. Javascript execution and code contest
+1. Javascript execution and code context
 2. Object destructure
 
 ## Spread operator (dot dot dot)
@@ -22,3 +22,23 @@
 ## Scope - Local and Global
 - var and default variable doesn't follow scoping. LIMITAITON!!
 - Mini Hoisting
+
+## 'this' in normal function and arraw function
+
+## IIFE (Immidiately Invoked Function Expression)
+- Syntax: 
+    (<function body>) ();
+- Example:
+    (function (){ 
+        console.log("Immidiately Invoked Function")
+    }) ();
+- Uses cases:
+    - DB connection
+    - To avoid getting function scope populated from global scope 
+- Keep in mind
+    - Semi-colon at the end is MUST!!
+    - Named IIFE = normal function
+    - Unnamed IIFE = arrow function
+
+## JS code exection and call stack 
+- https://www.youtube.com/watch?v=ByhtOgF6uYM&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=25 
