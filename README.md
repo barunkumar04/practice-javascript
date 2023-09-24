@@ -62,7 +62,7 @@
         console.log(document.getElementById('firstHeading'))
         output - Brendan Eich
     - Amend
-        document.getElementById('firstHeading').innerHTML = "<\h1>Exploring DOM<\h1>"
+        document.getElementById('firstHeading').innerHTML = "```<h1>Exploring DOM<h1>```"
         Output - On the page, you would see Brendan Eich has replaced with "Exploring DOM"
 
 
@@ -89,11 +89,11 @@
 
 - Example:  Lets consider title tag from one.html - 
     
-    <\h1 id = "title" class="heading" >Exploring DOM <\span style="display: none;">  of JavaScript<\/span><\/h1>
+    ```<h1 id = "title" class="heading" >Exploring DOM <span style="display: none;">  of JavaScript</span></h1>```
 
     - console.log(document.getElementById("title").innerText) : Exploring DOM
     - console.log(document.getElementById("title").textContent) : Exploring DOM   of JavaScript
-    - console.log(document.getElementById("title").innerHTML) : Exploring DOM <span style="display: none;">  of JavaScript</span>
+    - console.log(document.getElementById("title").innerHTML) : Exploring DOM ```<span style="display: none;">  of JavaScript</span>```
 
 #### querySelector
 
