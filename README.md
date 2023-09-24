@@ -97,6 +97,58 @@
 
 #### querySelector
 
+- HTML snippet
 
+    ```
+        <body class="bg-black">
+        <div>
+            <h1 id = "title" class="heading"> Exploring DOM <span style="display: none;">  of JavaScript</span></h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <h2>1-Lorem ipsum dolor sit amet.</h2>
+            <h2>2-Lorem ipsum dolor sit amet.</h2>
+            <input type="password">
+            <ul>
+                <li>l1-1 Lorem ipsum dolor sit amet.</li>
+                <li>l1-2 Lorem ipsum dolor sit amet.</li>
+                <li>l1-3 Lorem ipsum dolor sit amet.</li>
+            </ul>
+        </div>
+        </body>
+    ```
+- seleting h2-tag: 
+    - console.log(doument.querySelector("h2")); 
+    - Output - ```<h2>1-Lorem ipsum dolor sit amet.</h2>``` 
+    - Notice - It selects only the first h2 tag
+- selecting first list item and some manipulation
+    - const firstLI = document.querySepector("li")
+    - firstLI.style.color = "orange"
+    - firstLI.style.borderRadius = "25px"
 
+#### querySelectorAll
+    - Selects all tags passed as input
+    - We need to use this if we want to select or manipulate other that first tag
+    - Lets manipulate 2nd LI
+
+        const secondLI = document.querySelectorAll("li")[1]
+        secondLI.style.color = "blue"
+        secondLI.style.borderRadius = "30px"
+    - Lets iterate and manipulate
+        
+        const allLI = document.querySelectorAll("li")
+        
+        allLI.forEach(function (l) {
+            l.style.backgroundColor = "blue"
+        }) 
+
+#### getElementByClassName
+    - It return a HTMLCollection, not array. 
+    - To access foreach, map etc, we must convert to Array, as HTMLCollection doesn't have such properties
+    const allLI = document.getElementsByClassName("list-item")
+    ## allLI is not a Array, but a HTML Collection. So we can not apply forEach etc. 
+    ## converting to Array
+
+    const allLIInArray = Array.from(allLI)
+    allLIInArray.forEach(function (li){
+        li.style.color = "red"
+    })
 
