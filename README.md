@@ -42,3 +42,61 @@
 
 ## JS code exection and call stack 
 - https://www.youtube.com/watch?v=ByhtOgF6uYM&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=25 
+
+## DOM - Dcoument Object Model
+- Creator of JS: Brendan Eich (https://en.wikipedia.org/wiki/Brendan_Eich)
+- Way to access a sits's document in Browser's console log
+    - Element ID is required for accessing an element of DOM
+    - console.log(windows.document)
+    - console.log(document)
+    - console.dir(document) # lists out a complete properties
+    - Give me URL of the page
+        -   console.log(document.baseURI)
+        -   Output: https://en.wikipedia.org/wiki/Brendan_Eich
+    - Give me all the links of page
+        - console.log(document.links)
+        - Output is an array like collection
+    - Heading of this wiki page
+- DOM Manipulation
+    -  Get the heading
+        console.log(document.getElementById('firstHeading'))
+        output - Brendan Eich
+    - Amend
+        document.getElementById('firstHeading').innerHTML = "<h1>Exploring DOM</h1>"
+        Output - On the page, you would see Brendan Eich has replaced with "Exploring DOM"
+
+
+### Documents component hierarchy
+- Refering one.html here
+- Hierachy 
+    -  window
+        - document
+            -  HTML
+                -  Head
+                    -  Title
+                    -  Meta
+                -  Body
+                    - div
+                        - h1
+                        - P
+
+### DOM Selector 
+
+#### textContent, innerText & innerHTML
+- innerText: get only visible text and skips any CSS or styling
+- textContent: get all text, even though there is any styling done
+- innerHTML: Gets information incluing html tags
+
+- Example:  Lets consider title tag from one.html - 
+    
+    <h1 id = "title" class="heading" >Exploring DOM <span style="display: none;">  of JavaScript</span></h1>
+
+    - console.log(document.getElementById("title").innerText) : Exploring DOM
+    - console.log(document.getElementById("title").textContent) : Exploring DOM   of JavaScript
+    - console.log(document.getElementById("title").innerHTML) : Exploring DOM <span style="display: none;">  of JavaScript</span>
+
+#### querySelector
+
+
+
+
