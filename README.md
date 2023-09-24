@@ -89,7 +89,7 @@
 
 - Example:  Lets consider title tag from one.html - 
     
-    <h1 id = "title" class="heading" >Exploring DOM <span style="display: none;">  of JavaScript</span></h1>
+    <\h1 id = "title" class="heading" >Exploring DOM <\span style="display: none;">  of JavaScript<\/span><\/h1>
 
     - console.log(document.getElementById("title").innerText) : Exploring DOM
     - console.log(document.getElementById("title").textContent) : Exploring DOM   of JavaScript
