@@ -62,7 +62,7 @@
         console.log(document.getElementById('firstHeading'))
         output - Brendan Eich
     - Amend
-        document.getElementById('firstHeading').innerHTML = "<h1>Exploring DOM</h1>"
+        document.getElementById('firstHeading').innerHTML = "<\h1>Exploring DOM<\h1>"
         Output - On the page, you would see Brendan Eich has replaced with "Exploring DOM"
 
 
