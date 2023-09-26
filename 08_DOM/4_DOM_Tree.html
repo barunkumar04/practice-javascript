@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=<1.0>">
+    <title>DOM</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    
+    <ul class="language">
+        <li>Scala</li>
+        <li>Java</li>
+    </ul>
+    
+    <script>
+        // ------------------------------ Add an item ------------------------------ // 
+        
+        // A function to add list item
+        function addLanguage(languageName){
+            // Creating a list item
+            const li = document.createElement("li");
+            li.innerHTML = `${languageName}`; // Note - This traverse the DOM tree. Performance impact!!
+            
+            // Addding to DOM
+            document.querySelector(".language").appendChild(li);
+        }
+        addLanguage("python");
+        addLanguage("ReactJS");
+
+        // A function to add list item - in an optimized way
+        function addLanguageInOptimizedWay(languageName){
+            // Creating a list item
+            const li = document.createElement("li");
+            li.appendChild(document.createTextNode(languageName)); // No DOM traversal here.
+
+            // Addding to DOM
+            document.querySelector(".language").appendChild(li);
+        }
+
+        addLanguage("COBOL");
+
+        // ------------------------------ Edit an item ------------------------------ //
+
+        // Replacing 4th item
+        const fourthItem = document.querySelector("li:nth-child(4)")
+        console.log(fourthItem);
+
+        // fourthItem.innerHTML = "JavaScript"; // Not a optimized way
+
+        const newLI = document.createElement("li");
+        newLI.textContent = "JavaScript";
+
+        fourthItem.replaceWith(newLI);
+
+        // Editing first element
+
+        const firstItem = document.querySelector("li:first-child");
+        firstItem.outerHTML = "<li>TypeScript</li>";
+
+         // ------------------------------ Remove an item ------------------------------ //
+
+         const lastItem = document.querySelector("li:last-child");
+         lastItem.remove() 
+
+    </script>
+
+</body>
+</html>
