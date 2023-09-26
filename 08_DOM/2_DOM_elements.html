@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent" >
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+
+<script>
+    // Access parent div tag
+    const parentDiv = document.querySelector(".parent") // this is how a class is accessed
+    console.log(parentDiv);
+
+    // Accessing child tags
+    const childrenOfParentDiv = parentDiv.children;
+    console.log(childrenOfParentDiv)
+
+    for (let index = 0; index < childrenOfParentDiv.length; index++) {
+        childrenOfParentDiv[index].style.color = "orange"
+        console.log(childrenOfParentDiv[index].innerText)
+    }
+
+    const firstChild = parentDiv.firstElementChild;
+    const lastChild = parentDiv.lastElementChild;
+
+    console.log(firstChild.innerText);
+    console.log(lastChild.innerText);
+
+    // Access parent tag, from child tag
+    const childDiv = document.querySelector(".day") // this is how a class is accessed
+    console.log(childDiv);
+
+    const parentDivFromChild = childDiv.parentElement;
+    console.log(parentDivFromChild);
+
+    // Accessing siblings
+    console.log(firstChild.nextElementSibling)
+
+    // [IMP] Accessing nodes - This is just tag but line break, comment are also included. 
+
+    console.log("Nodes - ", parentDiv.childNodes); // Notice that, here 9 elements are present
+
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <title>"DOM exploration"</title>
+</body>
+
+<script>
+    const div = document.createElement('div');
+    div.className = "main"
+    div.id = Math.round(Math.random() * 10 + 1);
+
+    div.setAttribute("title", "generated title"); // Suggested approach
+    div.style.backgroundColor = "orange";
+
+    // div.innerText = "Injected Text"; // This or such direct access makes round trip
+    const textToAdd = document.createTextNode("Injected Text");
+    div.appendChild(textToAdd);
+    console.log(div);
+
+    document.body.appendChild(div)
+
+</script>
+
+</html>
