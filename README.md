@@ -157,3 +157,71 @@ Refer DOM_Tree.html files
 
 ## Projects - Refer projects folder in source code.
 
+## Events
+- JS executes sequencialy. But, event allows to execute code on event. Like, click, mousedrag, mouseover etc.
+- Ways to add a event on tag
+    1. Alter the html tag itself and define evetn. But, this is NOT Recemmonded when scale.For example - 
+        ```
+            <li><img width ="500px" height="300px" src="./pics/TheMightyOne.jpg" alt="TheMightyOne" id="TheMightyOne'" onclick="alert('Ant clicked!')"></li>
+        ```
+    2. Get element and apply event.
+        ```
+            document.getElementById('TheMightyOne').onclick = function(){
+                alert("Ant clicked!!")
+            }
+        ```
+    3. Add using listner - Recemmonded Way
+        ```
+            document.getElementById('TheMightyOne').addEventListener('click', function(){
+                alert("Ant clicked from listner!!")
+                }, false)
+        ```
+- Few important events to know
+    - type
+    - timestamp
+    - defaultPrevented. Notice, we have used it.
+    - target
+    - toElement
+    - srcElement
+    - currentTarget
+    - clientX and clientY, screenX, screenY. [INTERVIEW]
+    - altKey, ctrlKey, shiftKey, keyCode
+
+- Event Propagation [INTERVIEW]
+    - Types
+        1. Event Bubbling
+            - Like a bubble, bottom to up.
+            - This is default.
+            - Example:
+                ```
+                    document.getElementById('myclicks').addEventListener('click', function(event){
+                        console.log("Clicked - Image Folder")
+                    }, false);
+
+                    document.getElementById('ThousandSwards').addEventListener('click', function(event){
+                        console.log("Clicked - ThousandSwards")
+                    }, false)
+
+                    // Clicking on grass image. Console output is:
+                    // Clicked - ThousandSwards
+                    // Clicked - Image Folder
+                ```
+        2. Event Capturing 
+            - Top to bottom
+            - Example:
+            ```
+                    document.getElementById('myclicks').addEventListener('click', function(event){
+                        console.log("Clicked - Image Folder")
+                    }, true);
+
+                    document.getElementById('ThousandSwards').addEventListener('click', function(event){
+                        console.log("Clicked - ThousandSwards")
+                    }, true)
+
+                    // Clicking on grass image. Console output is:
+                    // Clicked - Image Folder
+                    // Clicked - ThousandSwards
+             ```
+    - To stop propagation add this: event.stopPropagation();
+
+    

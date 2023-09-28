@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Events</title>
+</head>
+<body style="background-color: black;color: aliceblue;">
+    <h1> My Clicks </h1>
+    <ul id="myclicks">
+        <li><img width ="500px" height="300px" src="./pics/TheMightyOne.jpg" alt="TheMightyOne" id="TheMightyOne"></li>
+        <li><img width ="500px" height="300px" src="./pics/Blissfulness.jpg" alt="Blissfulness" id="Blissfulness"></li>
+        <li><img width ="500px" height="300px" src="./pics/ThousandSwards.jpg" alt="ThousandSwards" id="ThousandSwards"></li>
+        <li><a href="https://github.com/barunkumar04" id="mygithub">My Git Hub</a></li>
+    </ul>
+</body>
+<script>
+    // document.getElementById('TheMightyOne').onclick = function(){
+    //     alert("Ant clicked!!")
+    // }
+
+    // document.getElementById('TheMightyOne').addEventListener('click', function(event){
+    //     alert("Ant clicked from listner!!")
+    //     console.log(event)
+    // }, false)
+
+    document.getElementById('myclicks').addEventListener('click', function(event){
+        console.log("Clicked - Image Folder")
+    }, false);
+
+    document.getElementById('ThousandSwards').addEventListener('click', function(event){
+        console.log("Clicked - ThousandSwards")
+        event.stopPropagation();
+    }, false)
+
+    document.getElementById('mygithub').addEventListener('click', function(event){
+        alert("My Git Hub clicked, but it will not go to github as preventDefault has applied!");
+        event.preventDefault();
+    }, false)
+</script>
+</html>

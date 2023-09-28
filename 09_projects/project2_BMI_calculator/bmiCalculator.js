@@ -4,7 +4,7 @@ const form = document.querySelector("form");
 // add listner on fomr
 form.addEventListener('submit', function(event){
 
-    event.preventDefault(); // By default, form submit does many call back submits, prevneitng them.
+    event.preventDefault(); // By default, sbubmit event tries to send info to server. Preventing that.
 
     const height = parseInt(document.querySelector('#height').value);
     const weight = parseInt(document.querySelector('#weight').value);
