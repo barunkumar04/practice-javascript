@@ -154,3 +154,6 @@
 
 ### DOM Tree and element select/edit/add/delete
 Refer DOM_Tree.html files
+
+## Projects - Refer projects folder in source code.
+
