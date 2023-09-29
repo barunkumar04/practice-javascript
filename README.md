@@ -1,5 +1,8 @@
 # Notes
 
+## Javascript
+    - Synchronous & Single Threaded
+
 ## Documentations
 
 1. Specification - https://tc39.es/ecma262/
@@ -224,4 +227,22 @@ Refer DOM_Tree.html files
              ```
     - To stop propagation add this: event.stopPropagation();
 
-    
+## Async
+    - A recap, prerequisite
+        - Javascript is a synchronous and single threaded language
+        - Execution context
+            - Executes one line of code at a time
+            - Have - Call Stack and Memory Heap
+    - Type of execution
+        - Blocking Code
+        - Non Blocking Code
+    - Event Loop: Refer pic in 11_async folder
+        - Notice, Global Execution Context
+    - Note, Global Context in Call Stack.
+
+### Event Timeout and Timeout cancellation
+    - Refer 01_eventTimeout.html
+
+### Event Interval and Interval cancellation
+    - Refer 01_eventInterval.html
+
