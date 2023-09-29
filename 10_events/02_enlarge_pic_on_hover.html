@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Events</title>
+</head>
+<body style="background-color: black;color: aliceblue;">
+    <h1> My Clicks </h1>
+    <ul id="myclicks">
+        <li><img width ="500px" height="300px" src="./pics/TheMightyOne.jpg" alt="TheMightyOne" id="TheMightyOne"></li>
+        <li><img width ="500px" height="300px" src="./pics/Blissfulness.jpg" alt="Blissfulness" id="Blissfulness"></li>
+        <li><img width ="500px" height="300px" src="./pics/ThousandSwards.jpg" alt="ThousandSwards" id="ThousandSwards"></li>
+        <li><a href="https://github.com/barunkumar04" id="mygithub">My Git Hub</a></li>
+    </ul>
+</body>
+<script>
+    
+    // Lets get all image tags
+
+    const allImageLITag = document.querySelectorAll('li');
+    console.log(allImageLITag);
+
+    allImageLITag.forEach(function(imageLITag){
+        
+        imageLITag.addEventListener("mouseover",function(event){
+            const imageTag = event.target;
+            imageTag.style.height = '800px';
+            imageTag.style.width = '800px';
+        }, false); // Default behaviour - Event Bubbling
+
+        imageLITag.addEventListener("mouseout",function(event){
+            const imageTag = event.target;
+            imageTag.style.height = '300px';
+            imageTag.style.width = '500px';
+        }, false); // Default behaviour - Event Bubbling
+
+    });
+
+
+</script>
+</html>

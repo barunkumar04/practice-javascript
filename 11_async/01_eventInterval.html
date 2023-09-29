@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Timeout</title>
+</head>
+<body>
+    <!-- Greet continously after few second -->
+    <!-- Stop is 'Stop' button is pressed, Start when 'Start' is pressed -->
+
+    <div id="greet"></div>
+    <button id="start">Start Greet!</button>
+    <button id="stop">Stop Greet!</button>
+
+</body>
+<script>
+    const sayHello = function(){
+        document.getElementById('greet').innerHTML = `Hello JS! ${Date.now()}`;
+        // document.getElementById('greet').innerHTML = "Hello";
+    }
+    
+    // Greet after  seconds
+    // const intervalId ;
+
+    // Start
+    document.getElementById('start').addEventListener('click', function(event){
+        intervalId = setInterval(sayHello, 2000);
+    }, false);
+    
+
+    // Stop
+    document.getElementById('stop').addEventListener('click', function(event){
+        clearInterval(intervalId); // It requires handle of setTimeout
+        console.log("Cleared timeout.");
+    }, false);
+    
+
+</script>
+</html>
