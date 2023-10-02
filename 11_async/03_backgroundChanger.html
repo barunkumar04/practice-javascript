@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <div style="text-align: center; height: 500px; width: 500px; background-color: blue;" id="colorBox"></div>
+    </div>
+   
+</body>
+
+<script>
+    // a function that returns a random color code
+    // color code - A six digit, hex number starts with #. Example #458AFF
+
+    function randomColorGenerator(){
+        const hexCodes = "0123456789ABCDDEF";
+        let color = "#";
+
+        for (let index = 0; index < 6; index++) {
+            // A random number between 0-16, inclusive 0 and exclusive 16
+            const randomLoc = Math.floor(Math.random()*16);
+
+            color += hexCodes[randomLoc];
+        }
+        return color;
+    }
+
+    const box = document.getElementById('colorBox');
+
+    const changeColor = function(){
+            const color = randomColorGenerator();
+            box.style.backgroundColor = color;
+        }
+    
+    let intervalId = null;
+    //Starting to change the color on start event
+    document.getElementById('start').addEventListener('click',function(event){
+        if(intervalId === null){
+            intervalId = setInterval(changeColor, 1000); // 1 sec
+        }
+    }, false);
+
+    //Stopping to change the color on stp event
+    document.getElementById('stop').addEventListener('click',function(event){
+       clearInterval(intervalId);
+       intervalId = null;
+    }, false);
+    
+
+</script>
+</html>
