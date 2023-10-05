@@ -246,3 +246,14 @@ Refer DOM_Tree.html files
 ### Event Interval and Interval cancellation
     - Refer 01_eventInterval.html
 
+## API Request
+    - A few popular APIs
+        - GitHub - https://api.github.com/users/barunkumar04
+        - Random User - https://randomuser.me
+    - Important links
+        - V8 engine code - https://github.com/v8/v8
+        - XMLHttpRequests 
+            - https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest 
+            - https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX 
+        - XMLttpRequest readyState - https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Profile Fetch</title>
+</head>
+<body>
+    <button id="fetchGitHubProfile"> Fetch GitHub Profile [TODO]</button>
+    <div style="height: 500px; width: 500px; text-align: center;" id="card">
+    
+    </div>
+</body>
+<script>
+    const request = new XMLHttpRequest();
+    const requestURL = 'https://api.github.com/users/barunkumar04';
+    request.open('GET',requestURL);
+    request.send();
+
+    request.onreadystatechange = function(){
+        console.log('Ready State: ', request.readyState);
+        if(request.readyState === 4 ){
+            console.log(this.responseText)
+
+            const response = JSON.parse(this.responseText);
+            console.log(response.bio);
+
+            const card = document.getElementById('card');
+            card.innerHTML = `<p><img id="profilePic" alt="Profile Picture" src = ${response.avatar_url}></p>
+                              <p> Bio -  ${response.bio}</p>
+                            `;
+        }
+    }
+
+</script>
+</html>
