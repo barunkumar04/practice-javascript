@@ -265,3 +265,7 @@ Refer DOM_Tree.html files
     - Source code - https://github.com/v8/v8
     - console.log implementation: https://github.com/v8/v8/blob/main/src/d8/d8-console.cc
         - DBconsole:Log(param)
+## Promise
+    - Definition - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+    - Q and BlueBird libraries - https://stackoverflow.com/questions/34960886/are-there-still-reasons-to-use-promise-libraries-like-q-or-bluebird-now-that-we
+    - Bluebird vs Native Async performance - https://blog.kuzzle.io/bluebird-native-async_await-javascript-promises-performances-2020
