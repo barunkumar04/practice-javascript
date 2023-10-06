@@ -257,3 +257,11 @@ Refer DOM_Tree.html files
             - https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX 
         - XMLttpRequest readyState - https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState
 
+## Console log
+    - This capability is provided by runtime engines like v8. 
+    - 'document' is also not part of JS.
+### V8 engine
+    - Written in C++.
+    - Source code - https://github.com/v8/v8
+    - console.log implementation: https://github.com/v8/v8/blob/main/src/d8/d8-console.cc
+        - DBconsole:Log(param)
