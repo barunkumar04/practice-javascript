@@ -272,3 +272,7 @@ Refer DOM_Tree.html files
 
 ### Resolve Chaining and async-await 
     - Refer practice code under 13_promise folder
+
+## Fetch
+    - https://www.youtube.com/watch?v=Rive84an6Lc&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=41
+    - Refer 14_fetch folder for example code
