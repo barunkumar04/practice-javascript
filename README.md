@@ -269,3 +269,6 @@ Refer DOM_Tree.html files
     - Definition - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
     - Q and BlueBird libraries - https://stackoverflow.com/questions/34960886/are-there-still-reasons-to-use-promise-libraries-like-q-or-bluebird-now-that-we
     - Bluebird vs Native Async performance - https://blog.kuzzle.io/bluebird-native-async_await-javascript-promises-performances-2020
+
+### Resolve Chaining and async-await 
+    - Refer practice code under 13_promise folder
