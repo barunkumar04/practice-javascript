@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind Example</title>
+</head>
+<body>
+    <Button id="button">Contact Chandrayaan</Button>
+</body>
+<script>
+    class ChandrayaanCommunicator{
+        constructor(){
+            this.sendLocation = "Sriharikota";
+            this.receiveLocation = "Chandrayaan";
+
+            // Adding event listner on button and referencing a method
+            document
+                .querySelector('button')
+                .addEventListener('click', this.handleClick.bind(this))
+        }
+        
+        handleClick() {
+            console.log(`Request sent - ${this.sendLocation}.`);
+            console.log(`Request received - ${this.receiveLocation}.`);
+            // console.log(this); // <button id="button">Send request to Chandrayaan</button>
+        }
+    }
+
+    // Every time a page loads, created an object of communicator.
+    const communicate = new ChandrayaanCommunicator();
+</script>
+</html>
+
+<!--
+    Observe - 
+        1. Send and receive locations are undefined.
+        2. But, console.log(this) does print <button id="button">Send request to Chandrayaan</button>
+    
+    Why so? - 
+        1. Since this method is call from button click, reference of <Button> has passed over.
+        2. But,  ChandrayaanCommunicator properties are not being passed. 
+    
+    What to do, to make it work? - 
+        1. Bind. Change from 'this.handleClick' to 'this.handleClick.bind(this)'
+        2. This bundles current context (here ChandrayaanCommunicator's , properties along with Button reference)
+-->

@@ -300,3 +300,11 @@ Refer DOM_Tree.html files
 ## call & this
     - https://www.youtube.com/watch?v=-owpuf4lbyU&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=44 
     - Code example - 01_call_and_this.js
+## Bind 
+    - Similar to call, used for passing context info.
+    - Let's understand with an example. We have requirement of 
+        - Have a page and a button on it.
+        - When this page loads, an object should be created, and
+            - With Button clicked, 'Button clicked' message should be printed
+            - Also, Object inlfo like request server url should be printed. Note this one.
+        - Refer bind.html for example
