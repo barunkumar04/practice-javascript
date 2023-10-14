@@ -309,17 +309,22 @@ Refer DOM_Tree.html files
             - Also, Object inlfo like request server url should be printed. Note this one.
         - Refer bind.html for example
 
-## Restrictions on Obejct
+## Advance Concepts
+### Define an obejct's property - Make property non-editable, make an array non-iteratable
     - Can we apply restrictions on object properties? like - 
         - Property(ies) of an Object should not be changed.
         - An array should not be iterated 
     - Answer is Yes!
-    - Refer examples under restriction_on_object folder
+    - Refer examples under advance_concepts folder
 
-## Getter, Setter & Call Stack
+### Stack Overflow - Constructor, getter and setter
     - Has to be same at property name, prefixed with get/set
     - When constructor is called, setter too is called.
-    - When property is accessed, ,getter to is called.
+    - When property is accessed, getter to is called.
     - Problem - RangeError: Maximum call stack size exceeded
-    - Soltion - Change variable name. Refer solution in getter_setter.js
+    - Soltion - Change variable name. Refer solution in 03_stack_overflow_constructor_get_set.js
     - Its mendatory to right getter, when setter is written ad vice-versa.
+
+### Lexical scoping and Closure
+    - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
+    - https://www.youtube.com/watch?v=VaH09NXQZ58&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=49
