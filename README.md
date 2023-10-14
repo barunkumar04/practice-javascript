@@ -315,3 +315,11 @@ Refer DOM_Tree.html files
         - An array should not be iterated 
     - Answer is Yes!
     - Refer examples under restriction_on_object folder
+
+## Getter, Setter & Call Stack
+    - Has to be same at property name, prefixed with get/set
+    - When constructor is called, setter too is called.
+    - When property is accessed, ,getter to is called.
+    - Problem - RangeError: Maximum call stack size exceeded
+    - Soltion - Change variable name. Refer solution in getter_setter.js
+    - Its mendatory to right getter, when setter is written ad vice-versa.
