@@ -308,3 +308,10 @@ Refer DOM_Tree.html files
             - With Button clicked, 'Button clicked' message should be printed
             - Also, Object inlfo like request server url should be printed. Note this one.
         - Refer bind.html for example
+
+## Restrictions on Obejct
+    - Can we apply restrictions on object properties? like - 
+        - Property(ies) of an Object should not be changed.
+        - An array should not be iterated 
+    - Answer is Yes!
+    - Refer examples under restriction_on_object folder
